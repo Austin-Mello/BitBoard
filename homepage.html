@@ -9,22 +9,24 @@
         <meta http-equiv="X-UA-Compatible"
         content="ie=edge" />
         <title>BitBoard</title>
+        <link rel="stylesheet" href="homepage.css"/>
     </head>
 
     <body>
         <h1>BitBoard</h1>
-        <canvas id="BitBoard"></canvas>
+        <canvas id="BitBoard" oncontextmenu="return false;"></canvas>
         <div id="gridWrapper">
+            <p id="loading-p"></p>
             <div id="colorTool">
                 <div>Red</div>
                 <div id="red"></div>
-                <input id="redness" type="text" placeholder="000" value="00" />
+                <input id="redness" type="text" placeholder="000" value="000" />
                 <div>Blue</div>
                 <div id="blue"></div>
-                <input id="blueness" type="text" placeholder="000" value="00" />
+                <input id="blueness" type="text" placeholder="000" value="000" />
                 <div>Green</div>
                 <div id="green"></div>
-                <input id="greeness" type="text" placeholder="000" value="00" />
+                <input id="greeness" type="text" placeholder="000" value="000" />
             </div>
                 <div id="zoomTool"> 
                 <button class="zoomButton" id="zoomOut">
@@ -35,7 +37,7 @@
                 </button>
             </div>
         </div>
-        <script src="main.js"></script>
+        <script src="homepage.js"></script>
         <script src="BitBoard.js"></script>
         <script src="glwindow.js"></script>
         <script>
