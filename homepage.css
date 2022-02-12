@@ -31,7 +31,7 @@ body {
 }
 
 #gridWrapper > #colorTool, #zoomTool {
-	visibility: hidden;
+	visibility: visible;
 }
 
 
@@ -46,47 +46,19 @@ body {
 
 #colorTool {
 	position: absolute;
-	bottom: 16px;
-	left: 16px;
+	bottom: 40px;
+	left: 20px;
 	display: flex;
 	flex-direction: row;
 }
 
-#Red {
+#color-swatch {
 	width: 20px;
 	height: 22px;
-	background-color: #FF0000;
+	background-color: #000000;
 }
 
-#redness {
-	height: 20px;
-	padding: 1px;
-	border: none;
-	outline: none;
-	pointer-events: all;
-}
-
-#Blue {
-	width: 20px;
-	height: 22px;
-	background-color: #00FF00;
-}
-
-#blueness {
-	height: 20px;
-	padding: 1px;
-	border: none;
-	outline: none;
-	pointer-events: all;
-}
-
-#Green {
-	width: 20px;
-	height: 22px;
-	background-color: #0000FF;
-}
-
-#greeness {
+#color-field {
 	height: 20px;
 	padding: 1px;
 	border: none;
@@ -104,7 +76,7 @@ body {
 
 #zoomTool {
 	position: absolute;
-	bottom: 16px;
+	bottom: 40px;
 	right: 16px;
 }
 

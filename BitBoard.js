@@ -12,7 +12,7 @@ class BitBoard {
 		this.#loaded = false;
 		this.#socket = null;
 		this.#loadingp = document.querySelector("#loading-p");
-		this.#uiwrapper = document.querySelector("#ui-wrapper");
+		this.#uiwrapper = document.querySelector("#gridWrapper");
 		this.#glWindow = glWindow;
 	}
 

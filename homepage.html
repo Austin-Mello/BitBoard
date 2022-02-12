@@ -2,14 +2,12 @@
 
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport"
-        content="width=device-width,
-        initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible"
-        content="ie=edge" />
-        <title>BitBoard</title>
-        <link rel="stylesheet" href="homepage.css"/>
+        <title>Place</title>
+	<link rel="stylesheet" href="homepage.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="An online pixel canvas inspired by r/place.">
+	<meta name="keywords" content="r/place, place, game, golang, canvas">
+	<link rel="preload" href="/place.png" as="fetch" crossorigin-->
     </head>
 
     <body>
@@ -18,15 +16,8 @@
         <div id="gridWrapper">
             <p id="loading-p"></p>
             <div id="colorTool">
-                <div>Red</div>
-                <div id="red"></div>
-                <input id="redness" type="text" placeholder="000" value="000" />
-                <div>Blue</div>
-                <div id="blue"></div>
-                <input id="blueness" type="text" placeholder="000" value="000" />
-                <div>Green</div>
-                <div id="green"></div>
-                <input id="greeness" type="text" placeholder="000" value="000" />
+                <div id="color-swatch"></div>
+                <input id="color-field" type="text" placeholder="#000000" value="#000000" />
             </div>
                 <div id="zoomTool"> 
                 <button class="zoomButton" id="zoomOut">

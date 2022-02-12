@@ -49,11 +49,11 @@ const GUI = (canv, glWindow, bitboard) => {
 		glWindow.draw();
 	});
 
-	document.querySelector("#zoom-in").addEventListener("click", () => {
+	document.querySelector("#zoomIn").addEventListener("click", () => {
 		zoomIn();
 	});
 
-	document.querySelector("#zoom-out").addEventListener("click", () => {
+	document.querySelector("#zoomOut").addEventListener("click", () => {
 		zoomOut();
 	});
 
