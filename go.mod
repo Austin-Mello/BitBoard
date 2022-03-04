@@ -1,4 +1,4 @@
-module github.com/Austin-Mello/Bitboard
+module github.com/Austin-Mello/BitBoard
 
 go 1.17
 
