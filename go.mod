@@ -1,8 +1,8 @@
-module github.com/Austin-Mello/place
+module github.com/Austin-Mello/Bitboard
 
 go 1.17
 
 require (
-	github.com/Austin-Mello/Bitboard v0.0.0-20220303101503-5682bc0bac92 // indirect
-	github.com/rbxb/httpfilter v1.0.0 // indirect
+	github.com/gorilla/websocket v1.4.2
+	github.com/rbxb/httpfilter v0.0.0-20201201140554-d0702af823a9
 )
