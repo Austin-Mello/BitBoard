@@ -1,4 +1,4 @@
-package BitBoard
+package place
 
 import (
 	"bytes"
