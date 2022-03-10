@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="module"
+      src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"
+    ></script>
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        if (typeof web3 !== "undefined") {
+          console.log(
+            "Web3 Detected! " + web3.currentProvider.constructor.name
+          );
+          window.web3 = new Web3(web3.currentProvider);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const data = {
+          address: "add_here",
+          pixel_info: "PIXEL_INFO!!",
+        };
+        const Url = `http://localhost:5000/pixel_tx?address=${data.address}&pixel=${data.pixel_info}`;
+        $("#txn").click(function () {
+          $.get(Url, function (data, status) {
+            console.log(`status is ${status}`);
+          });
+        });
+      });
+
+      $(".btn").click(function (data, status) {
+        console.log(`${data} and status is ${status}`);
+      });
+    </script>
+    <h1>Metamask Transactions Testing with Ganache</h1>
+    <button id="txn">Generate Transaction</button>
+  </body>
+</html>
