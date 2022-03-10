@@ -20,15 +20,18 @@
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        const data = {
-          address: "add_here",
-          pixel_info: "PIXEL_INFO!!",
-        };
-        const Url = `http://localhost:5000/pixel_tx?address=${data.address}&pixel=${data.pixel_info}`;
+      $(document).ready(async function () {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const account = accounts[0];
+        const pixel_info = "PIXEL_INFO_HERE"
+        const Url = `http://localhost:5000/pixel_tx?address=${account}&pixel=${pixel_info}`;
         $("#txn").click(function () {
           $.get(Url, function (data, status) {
             console.log(`status is ${status}`);
+            const txHash = await ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [data]
+            });
           });
         });
       });
